@@ -3,34 +3,43 @@ import java.util.*;
 public class Part3{
 
     //stack implementation
+   // 1
+
+    // 5
+    // 3
+    // 2
+
 
     ArrayList<Integer> stack;
+    //ArrayList<Integer> minStack;
     int top = 0;
 
     public Part3(){
         stack = new ArrayList<Integer>();
+        //minStack = new ArrayList<Integer>();
         top = 0;
     }
     public void push(int x){
         stack.add(x);
+        //minStack.add(x);
         top++;
     }
 
-    public int pop(){
+    public Integer pop(){
         if(!stack.isEmpty()){
             int temp = stack.get(top-1);
             stack.remove(top-1);
             top--;
             return temp;
         }
-        return -1; //return -1 if stack is empty
+        return null; //return -1 if stack is empty
     }
     
-    public int top(){
+    public Integer top(){
         if(!stack.isEmpty()){
             return stack.get(top-1);
         }
-        return -1; //return -1 if stack is empty      
+        return null; //return -1 if stack is empty      
     }
 
     public boolean isEmpty(){
