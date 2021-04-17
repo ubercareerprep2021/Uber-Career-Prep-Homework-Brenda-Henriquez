@@ -70,8 +70,9 @@ public class Part3{
 class uberQueue{
     //linked list
 
-    private Node front, rear; 
-    private int size; // number of items
+    private Node front;
+    private Node rear; 
+    private int size; 
 
     private class Node
     { 
