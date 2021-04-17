@@ -67,45 +67,84 @@ public class Part3{
 
 }
 
-// class uberQueue{
-//     //linked list
+class uberQueue{
+    //linked list
 
-//     class Node{
-//         int data;
-//         Node next;
-//     }
+    private Node front, rear; 
+    private int size; // number of items
 
-//     Node start;
-//     int size = 0;
-//     public uberQueue(){
-//         start = new Node();
-//         size = 0;
-//     }
+    private class Node
+    { 
+        int data;
+        Node next;
+    }
 
-//     public void enqueue(int x){
-//         Node nextNode = new Node();
-//         start.data = x;
-//         start.next = nextNode;
-//         start = nextNode;
-//         size++;
-//     }
+    public uberQueue()
+    {
+        front = null;
+        rear = null;
+        size = 0;
+    }
 
-//     public void dequeue(){
-//         start.next = null;
-//         size--;
-//     }
+    public boolean isEmpty()
+    {
+        if (size == 0) return true;
+        return false;
+    }
 
-//     public Node rear(){
-       
-//         return start.data
+    public int dequeue()
+    {
+        int data = front.data;
+        front = front.next;
+        if (isEmpty()) 
+        {
+            rear = null;
+        }
+        size--;
+        return data;
+    }
 
-//     }
+    public void enqueue(int data)
+    {
+        Node temp = rear;
+        rear = new Node();
+        rear.data = data;
+        rear.next = null;
+        if (isEmpty()) 
+        {
+            front = rear;
+        }
+        else 
+        {
+            temp.next = rear;
+        }
+        size++;
+    }
 
-//     public boolean isEmpty(){
-//         if(start.data == null ) return true;
-//         return false;
-//     }
+    public int size(){
+        return size;
+    }
 
+    public int front(){
+        return front.data;
+    }
 
+    public int rear(){
+        return rear.data;
+    }
 
-// }
+    public static void main(String[] args){
+        //testing queue
+
+        // uberQueue ub = new uberQueue();
+        // ub.enqueue(1);
+        // ub.enqueue(2);
+        // ub.enqueue(3);
+        // System.out.println(ub.size());
+        // System.out.println(ub.front());
+        // System.out.println(ub.rear());
+        // System.out.println(ub.dequeue());
+
+    }
+
+}
