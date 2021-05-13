@@ -80,16 +80,6 @@ class Part5{
         System.out.println(reverseList(head));
 
 
-
-        // uberQueue ub = new uberQueue();
-        // ub.enqueue(1);
-        // ub.enqueue(2);
-        // ub.enqueue(3);
-        // System.out.println(ub.size());
-        // System.out.println(ub.front());
-        // System.out.println(ub.rear());
-        // System.out.println(ub.dequeue());
-
     }
 
 
