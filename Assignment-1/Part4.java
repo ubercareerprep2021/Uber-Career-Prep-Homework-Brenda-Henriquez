@@ -17,13 +17,21 @@ class Part4{
         }
     }
 
+    part4(){
+        head = null;
+        rear = null;
+        size = 0;
+    }
+
     void push (Node node){
         head = node;
         size++;
     }
 
     Node pop(){
-        
+        if(head == null) return null;
+        int res = rear.data;
+
         return null;
     }
 
